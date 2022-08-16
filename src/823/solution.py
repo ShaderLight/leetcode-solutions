@@ -1,9 +1,9 @@
-from typing import List
+from typing import List, Dict
 
 class Solution:
     def numFactoredBinaryTrees(self, arr: List[int]) -> int:
         arr.sort()
-        trees_with_root = {}
+        trees_with_root: Dict[int, int] = {}
 
         for x in arr:
             trees_with_root[x] = 1
