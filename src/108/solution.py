@@ -30,7 +30,7 @@ def treeTraversalUtil(root:TreeNode) -> None:
     
     command = -1
     current_node = root
-    traversal_history = []
+    traversal_history: List[TreeNode] = []
 
     while command != -2:
         printNode(current_node)
@@ -65,4 +65,5 @@ def treeTraversalUtil(root:TreeNode) -> None:
 if __name__ == '__main__':
     obj = Solution()
     result = obj.sortedArrayToBST([-10,-3,0,5,9])
+    assert result
     treeTraversalUtil(result)

@@ -26,6 +26,7 @@ class Solution:
     def nodeRoute(self, root:TreeNode, val:int) -> List[TreeNode]:
         route = [root]
         curr = root
+
         while curr.val != val:
             if curr.val > val:
                 curr = curr.left

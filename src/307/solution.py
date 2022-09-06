@@ -1,11 +1,12 @@
 
-from typing import*
+from __future__ import annotations
+from typing import List, Optional
 import sys
 
 sys.setrecursionlimit(50) # For debugging purposes
 
 class Node:
-    def __init__(self, value: int, left_child, right_child, starting_index, ending_index) -> None:
+    def __init__(self, value: int, left_child:Optional[Node], right_child:Optional[Node], starting_index:int, ending_index:int) -> None:
         self.value = value
         self.left_child = left_child
         self.right_child = right_child
@@ -20,7 +21,7 @@ class NumArray:
     def halfIndex(self, li: int, ri: int) -> int:
         return (ri+li)//2
     
-    def build(self, nums, li: int, ri: int) -> Node:
+    def build(self, nums: List[int], li: int, ri: int) -> Node:
         if ri==li:
             return Node(nums[li], None, None, li, ri)
 

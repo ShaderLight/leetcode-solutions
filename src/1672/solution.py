@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def maximumWealth(self, accounts: List[List[int]]) -> int:
         maximum_wealth = 0
@@ -15,4 +17,3 @@ class Solution:
             wealth += money
             
         return wealth
-        

@@ -1,8 +1,10 @@
+from typing import List
+
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
-        return map(self.singleFizzBuzz, range(1, n+1))
+        return list(map(self.singleFizzBuzz, range(1, n+1)))
     
-    def singleFizzBuzz(self, i):
+    def singleFizzBuzz(self, i:int) -> str:
         three_rem = (i%3 == 0)
         five_rem = (i%5 == 0)
         
